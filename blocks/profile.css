@@ -48,7 +48,7 @@
   opacity: 70%;
 }
 
-.profile__post_button {
+.profile__post-button {
   display: flex;
   justify-content: center;
   margin-top: auto;
@@ -68,7 +68,7 @@
   opacity: 80%;
 }
 
-.profile__edit_button {
+.profile__edit-button {
   display: flex;
   justify-content: center;
   margin-top: auto;
@@ -112,7 +112,7 @@
     font-size: 20px;
     line-height: 1;
   }
-  .profile__post_button {
+  .profile__post-button {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
