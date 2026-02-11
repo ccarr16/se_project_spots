@@ -1,12 +1,11 @@
-li {
-  list-style: none;
-}
 ul {
   margin: 0;
   padding: 0;
 }
 .cards {
   border-bottom: 1px solid #21212166;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .cards__content {
@@ -16,56 +15,9 @@ ul {
   justify-content: center;
 }
 
-.cards__image {
-  width: 413px;
-  max-height: 413px;
-  border-radius: 8px;
-}
-.card__caption {
-  margin: 0;
-  padding: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-.card__heart-button {
-  border: none;
-  background-color: transparent;
-  opacity: 40%;
-  padding: 0;
-}
-
-.card__heart-button:hover {
-  opacity: 100%;
-}
-
-.card__content {
-  margin-top: 12px;
-  margin-bottom: 4px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 413px;
-}
-
 @media screen and (max-width: 832px) {
-  .cards__image {
-    width: 288px;
-    height: 288px;
-  }
-
   .cards__content {
-    display: grid;
     grid-template-columns: 288px;
-    justify-content: center;
     gap: 20px 20px;
-  }
-
-  .card__caption {
-    font-size: 16px;
-    line-height: 1;
   }
 }
