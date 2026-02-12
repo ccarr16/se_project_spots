@@ -83,7 +83,7 @@
   line-height: 1;
 }
 
-.profile__edit_button:hover {
+.profile__edit-button:hover {
   opacity: 100%;
   cursor: pointer;
 }
@@ -104,6 +104,7 @@
   .profile__section {
     align-items: center;
     max-width: 288px;
+    text-align: center;
   }
   .profile__name {
     margin: 0px;

@@ -33,7 +33,6 @@
 
 .card__content {
   margin-top: 12px;
-  margin-bottom: 4px;
   display: flex;
   justify-content: space-between;
   max-width: 413px;
