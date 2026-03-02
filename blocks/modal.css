@@ -1,5 +1,9 @@
 .modal {
+  opacity: 0;
   visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +14,11 @@
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
   position: absolute;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0s;
 }
 
 .modal__container {
@@ -78,7 +86,7 @@
 }
 
 .modal__input {
-  opacity: 40%;
+  color: #212121;
   margin-bottom: 32px;
   padding: 0;
   border-radius: 8px;
