@@ -1,7 +1,3 @@
-ul {
-  margin: 0;
-  padding: 0;
-}
 .cards {
   border-bottom: 1px solid #21212166;
   padding-top: 20px;
@@ -9,6 +5,8 @@ ul {
 }
 
 .cards__content {
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
   gap: 40px 20px;

@@ -15,7 +15,7 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  position: absolute;
+  position: fixed;
   transition:
     opacity 0.3s ease,
     visibility 0s linear 0s;
@@ -47,6 +47,12 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.modal__header-button:hover,
+.modal__header-button:focus {
+  opacity: 0.85;
 }
 
 .modal__header {
@@ -66,6 +72,7 @@
 }
 
 .modal__save-button {
+  cursor: pointer;
   max-width: 156px;
   background-color: #212121;
   color: white;
@@ -76,10 +83,13 @@
   font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
 }
 
+.modal__save-button:hover {
+  opacity: 0.8;
+}
+
 .modal__label {
   margin-bottom: 8px;
   color: #212121b2;
-  opacity: 70%;
   font-weight: 500;
   font-size: 16px;
   font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
