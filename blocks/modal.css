@@ -1,4 +1,9 @@
 .modal {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   visibility: hidden;
   transition:
@@ -15,7 +20,6 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  position: fixed;
   transition:
     opacity 0.3s ease,
     visibility 0s linear 0s;
@@ -28,6 +32,8 @@
   max-width: 730px;
   background-color: white;
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .modal__form {
@@ -65,8 +71,8 @@
 }
 
 .modal__exit-icon {
-  height: 23px;
-  width: 23px;
+  height: 35px;
+  width: 35px;
   color: #212121;
   opacity: 40%;
 }
@@ -107,8 +113,16 @@
 }
 @media screen and (max-width: 832px) {
   .modal__container {
-    width: calc(100% - 20px);
-    margin: 0 auto;
+    width: calc(100% - 24px);
+    margin: 22px auto 12px auto;
+  }
+
+  .modal__header-text {
+    font-size: 20px;
+  }
+
+  .modal__save-button {
+    max-width: 100%;
   }
 }
 
