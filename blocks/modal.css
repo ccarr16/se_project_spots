@@ -114,7 +114,14 @@
 @media screen and (max-width: 832px) {
   .modal__container {
     width: calc(100% - 24px);
-    margin: 22px auto 12px auto;
+  }
+
+  .modal__header {
+    margin: 12px 12px 0 12px;
+  }
+
+  .modal__form {
+    margin: 24px 12px 12px 12px;
   }
 
   .modal__header-text {
