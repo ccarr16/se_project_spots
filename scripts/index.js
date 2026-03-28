@@ -83,5 +83,5 @@ newPostModal.addEventListener("submit", function (event) {
 });
 
 initialCards.forEach(function (item) {
-  console.log(item);
+  console.log(item.name);
 });
