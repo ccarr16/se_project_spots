@@ -48,110 +48,28 @@
         </section>
         <section class="cards">
           <ul class="cards__content">
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="house covered in snow"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Val Thorens</h2>
-                <button class="card__heart-button" type="button">
+            <template id="card-template">
+              <li class="card">
+                <img class="card__image" />
+                <button class="card__delete-button" type="button">
                   <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
+                    class="card__delete-icon"
+                    src="./images/State=Default.svg"
+                    alt="trash bin icon"
                   />
                 </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="exterior photo of restaurant"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Restaurant terrace</h2>
-                <button class="card__heart-button" type="button">
-                  <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="people eating outside"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">An outdoor cafe</h2>
-                <button class="card__heart-button" type="button">
-                  <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="bridge suspended over trees"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">
-                  A very long bridge, over the forrest...
-                </h2>
-                <button class="card__heart-button" type="button">
-                  <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="picture of an indoor tunnel "
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Tunnel with morning light</h2>
-                <button class="card__heart-button" type="button">
-                  <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                class="card__image"
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="house in the snow"
-              />
-              <div class="card__content">
-                <h2 class="card__caption">Mountain House</h2>
-                <button class="card__heart-button" type="button">
-                  <img
-                    class="card__heart-icon"
-                    src="./images/like.svg"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
+                <div class="card__content">
+                  <h2 class="card__caption"></h2>
+                  <button class="card__heart-button" type="button">
+                    <img
+                      class="card__heart-icon"
+                      src="./images/like.svg"
+                      alt="heart icon"
+                    />
+                  </button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -221,6 +139,24 @@
             />
             <button class="modal__save-button" type="submit">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="preview-image-modal">
+        <div class="modal__container-image">
+          <div class="modal__inner-container">
+            <img
+              class="modal__image"
+              src="./images/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+            />
+            <p class="modal__image-caption"></p>
+          </div>
+          <button class="modal__close-button" type="button">
+            <img
+              class="modal__exit-icon-image"
+              src="./images/exit-btn-image-modal.svg"
+              alt="exit button"
+            />
+          </button>
         </div>
       </div>
     </div>

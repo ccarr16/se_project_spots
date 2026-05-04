@@ -5,12 +5,17 @@
 }
 
 .cards__content {
+  list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(413px, 413px));
   gap: 40px 20px;
   justify-content: center;
+}
+
+.cards__content li {
+  position: relative;
 }
 
 @media screen and (max-width: 832px) {
