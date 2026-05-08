@@ -14,10 +14,6 @@
   justify-content: center;
 }
 
-.cards__content li {
-  position: relative;
-}
-
 @media screen and (max-width: 832px) {
   .cards__content {
     grid-template-columns: 288px;

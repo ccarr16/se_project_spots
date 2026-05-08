@@ -73,7 +73,6 @@
 .modal__exit-icon {
   height: 35px;
   width: 35px;
-  color: #212121;
   opacity: 40%;
 }
 
@@ -127,11 +126,16 @@
 }
 
 .modal__close-button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   border: 0;
   padding: 0;
   background: none;
+}
+
+.modal__close-button:hover {
+  opacity: 0.95;
 }
 .modal__inner-container {
   display: flex;
@@ -149,10 +153,9 @@
   border-radius: 8px;
   font-family: Poppins;
   font-weight: 500;
-  font-style: Medium;
   font-size: 20px;
   line-height: 120%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 .modal__exit-icon-image {

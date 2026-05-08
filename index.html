@@ -50,23 +50,11 @@
           <ul class="cards__content">
             <template id="card-template">
               <li class="card">
-                <img class="card__image" />
-                <button class="card__delete-button" type="button">
-                  <img
-                    class="card__delete-icon"
-                    src="./images/State=Default.svg"
-                    alt="trash bin icon"
-                  />
-                </button>
+                <img class="card__image" alt="" />
+                <button class="card__delete-button" type="button"></button>
                 <div class="card__content">
                   <h2 class="card__caption"></h2>
-                  <button class="card__heart-button" type="button">
-                    <img
-                      class="card__heart-icon"
-                      src="./images/like.svg"
-                      alt="heart icon"
-                    />
-                  </button>
+                  <button class="card__heart-button" type="button"></button>
                 </div>
               </li>
             </template>
@@ -129,6 +117,7 @@
               type="text"
               placeholder="Paste a link to the picture"
               id="input-image"
+              required
             />
             <label class="modal__label" for="input-caption">Caption</label>
             <input
@@ -136,6 +125,7 @@
               type="text"
               placeholder="Type your caption"
               id="input-caption"
+              required
             />
             <button class="modal__save-button" type="submit">Save</button>
           </form>
@@ -144,10 +134,7 @@
       <div class="modal" id="preview-image-modal">
         <div class="modal__container-image">
           <div class="modal__inner-container">
-            <img
-              class="modal__image"
-              src="./images/7-photo-by-griffin-wooldridge-from-pexels.jpg"
-            />
+            <img class="modal__image" alt="" />
             <p class="modal__image-caption"></p>
           </div>
           <button class="modal__close-button" type="button">
