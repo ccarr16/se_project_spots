@@ -27,11 +27,8 @@
 }
 
 .card__heart-button {
-  background-image: url("/images/like.svg");
+  background-image: url("../images/like.svg");
   border: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
   opacity: 0.4;
   padding: 0;
   width: 23px;
