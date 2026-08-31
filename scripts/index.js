@@ -40,6 +40,8 @@ const inputProfileDescription = editProfileModal.querySelector(
   "#input-profile-description",
 );
 
+const cardModal = document.querySelector(".modal");
+const cardSubmitButton = cardModal.querySelector(".modal__button");
 const profilePostButton = document.querySelector(".profile__post-button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostExitButton = newPostModal.querySelector(".modal__header-button");
@@ -60,11 +62,31 @@ const previewImageCloseButton = previewImageModal.querySelector(
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
+  modal.addEventListener("mousedown", handleOverlayClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
+  modal.removeEventListener("mousedown", handleOverlayClose);
 }
+
+function handleOverlayClose(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.currentTarget);
+  }
+}
+
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
+
 function getCardElement(data) {
   let cardElement = cardTemplate.content.cloneNode(true);
   let cardTitle = cardElement.querySelector(".card__caption");
@@ -91,6 +113,11 @@ function getCardElement(data) {
 }
 
 profileEditButton.addEventListener("click", function () {
+  resetValidation(
+    editProfileModal,
+    [inputProfileName, inputProfileDescription],
+    settings,
+  );
   openModal(editProfileModal);
   inputProfileName.value = profileName.textContent;
   inputProfileDescription.value = profileDescription.textContent;
@@ -105,6 +132,8 @@ editProfileModal.addEventListener("submit", function (event) {
   profileName.textContent = inputProfileName.value;
   profileDescription.textContent = inputProfileDescription.value;
   closeModal(editProfileModal);
+  event.target.reset();
+  disableButton(cardSubmitButton);
 });
 
 profilePostButton.addEventListener("click", function () {
@@ -124,6 +153,7 @@ newPostModal.addEventListener("submit", function (event) {
   let card = getCardElement(cardInfo);
   cardsContainer.prepend(card);
   event.target.reset();
+  clearValidation(newPostModal, validationConfig);
 });
 
 previewImageCloseButton.addEventListener("click", function () {
