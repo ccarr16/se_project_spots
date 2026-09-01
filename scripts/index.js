@@ -40,10 +40,10 @@ const inputProfileDescription = editProfileModal.querySelector(
   "#input-profile-description",
 );
 
+const newPostModal = document.querySelector("#new-post-modal");
 const newPostSubmitButton = newPostModal.querySelector(".modal__save-button");
 const editProfileSubmitButton = editProfileModal.querySelector(".modal__save-button");
 const profilePostButton = document.querySelector(".profile__post-button");
-const newPostModal = document.querySelector("#new-post-modal");
 const newPostExitButton = newPostModal.querySelector(".modal__header-button");
 const inputImage = newPostModal.querySelector("#input-image");
 const inputCaption = newPostModal.querySelector("#input-caption");
