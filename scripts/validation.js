@@ -7,22 +7,22 @@ const settings = {
   errorClass: "modal__error_visible",
 };
 
-function showInputError(formElement, inputElement, errorMessage, config) {
+function showInputError(inputElement, errorMessage, config) {
   inputElement.nextElementSibling.textContent = errorMessage;
   inputElement.classList.add(config.inputErrorClass);
 }
 
-function hideInputError(formElement, inputElement, config) {
+function hideInputError(inputElement, config) {
   inputElement.classList.remove(config.inputErrorClass);
   inputElement.nextElementSibling.textContent = "";
 }
 
 function checkInputValidity(inputElement, formElement, config) {
   if (inputElement.validity.valid) {
-    hideInputError(formElement, inputElement, config);
+    hideInputError(inputElement, config);
   } else {
     const errorMessage = inputElement.validationMessage;
-    showInputError(formElement, inputElement, errorMessage, config);
+    showInputError(inputElement, errorMessage, config);
   }
 }
 
@@ -34,19 +34,19 @@ function hasInvalidInput(formInputs) {
 
 function toggleButtonState(formInputs, formButton, config) {
   if (hasInvalidInput(formInputs)) {
-    disableButton(formButton);
-    formButton.classList.add(config.inactiveButtonClass);
+    disableButton(formButton, config);
   } else {
     formButton.disabled = false;
     formButton.classList.remove(config.inactiveButtonClass);
   }
 }
 
-function disableButton(formButton) {
+function disableButton(formButton, config) {
   formButton.disabled = true;
+  formButton.classList.add(config.inactiveButtonClass);
 }
 
-function resetValidation(formElement, formInputs, settings) {
+function resetValidation(formInputs, settings) {
   formInputs.forEach((input) => {
     hideInputError(formElement, input, settings);
   });
@@ -59,6 +59,10 @@ function setEventListeners(formElement, config) {
   let formButton = formElement.querySelector(config.submitButtonSelector);
 
   toggleButtonState(formInputs, formButton, config);
+
+  formElement.addEventListener("reset", () => {
+    disableButton(formButton, config);
+  });
 
   formInputs.forEach(function (inputElement) {
     inputElement.addEventListener("input", function () {
