@@ -117,11 +117,7 @@ function getCardElement(data) {
 }
 
 profileEditButton.addEventListener("click", function () {
-  resetValidation(
-    editProfileModal,
-    [inputProfileName, inputProfileDescription],
-    settings,
-  );
+  resetValidation([inputProfileName, inputProfileDescription], settings);
   openModal(editProfileModal);
   inputProfileName.value = profileName.textContent;
   inputProfileDescription.value = profileDescription.textContent;

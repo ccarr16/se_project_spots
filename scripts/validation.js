@@ -48,7 +48,7 @@ function disableButton(formButton, config) {
 
 function resetValidation(formInputs, settings) {
   formInputs.forEach((input) => {
-    hideInputError(formElement, input, settings);
+    hideInputError(input, settings);
   });
 }
 
