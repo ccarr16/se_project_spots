@@ -150,6 +150,7 @@ newPostForm.addEventListener("submit", function (event) {
   closeModal(newPostModal);
   let card = getCardElement(cardInfo);
   cardsContainer.prepend(card);
+  event.target.reset();
 });
 
 previewImageCloseButton.addEventListener("click", function () {
